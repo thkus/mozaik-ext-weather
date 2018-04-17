@@ -68,8 +68,8 @@ const client = mozaik => {
             }
 
             return Promise.props({
-                current:  methods.current(params),
-                forecast: methods.forecast(params)
+                current:  methods.current(params)
+                /*forecast: methods.forecast(params)*/
             })
                 .then((res) => {
                     cache.put(cacheKey, res, 1800000);
